@@ -1,0 +1,30 @@
+#------------------------------ Tutorial 2 : Exercice 8 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder, ...), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressure, Free velocity
+#
+# Table A.4, Air (T_fl=300 K, 1 atm) : ν = 15.89×10-6 (m2/s), k = 26.30×10-3(W/K/m), Pr = 0.707 , Prs = 0.700 ; 
+# Table A.4, Air (T_m =325 K, 1 atm) : ν = 18.40×10-6 (m2/s), k = 28.15×10-3(W/K/m), Pr = 0.7035, Prs = 0.700 ; 
+# Table A.1, Platinum (300-400 K) : ρe = 17.1 ×10-5 (Ω.m), Cp = 133 (J/Kg/K), k = 71.6 (W/K/m) ; 
+#------------------------------------------------------------------------------
+100             : Npt
+1               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+0.0005          : Length, radius, diameter, ... (m)
+0.683 0.466     : (C, m) Hilpert geometry 1
+0.683 0.466     : (C, m) Hilpert geometry 2
+0               : (0) Geometry1, (1) Geometry2
+#-----------------
+300.15          : Temperature fluide T_fl (K)
+350.15          : Temperature surface T_s (K)
+350.15          : Temperature final T_fin (K)
+1               : Pressur (Atm)
+10              : Free velocity (m/s)
+10              : Free velocity min (u_min)
+10.1            : Free velocity max (u_max)
+1               : Correlation (0) Hilpert, (1) Zhukauskas
+#----- Fluide ----
+15.89 0.0263 0.707  0.7 : Air_T_fl  (ν, k, Pr, Prs)
+18.40 0.02815 0.7035 0.7 : Air_T_m  (ν, k, Pr, Prs)
+#----- Solide ----
+17.1 133  71.6       : Platinum (ρe, Cp, k)

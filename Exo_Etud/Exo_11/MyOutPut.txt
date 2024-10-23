@@ -1,0 +1,3 @@
+Material    Re_D       Nu_u      h_bar(W/m2/K) Ts(°C)    
+Air_T_fl : 1.7206e+04  6.7520e+01  2.0129e+01  6.7162e+02  
+Water_T_fl : 7.4627e+04  4.9886e+02  3.4908e+03  1.8786e+01  

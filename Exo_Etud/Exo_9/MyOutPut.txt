@@ -1,0 +1,8 @@
+----- Results for 1th geometry ---------- 
+Material    Re_D       Nu_u      h_bar(W/m2/K) q_dot(W)  Time(H)   
+Air_T_fl : 1.2353e+04  5.2514e+01  5.6505e+01  1.6420e+03  10.64  
+Air_T_m : 5.3691e+03  2.9601e+01  4.7243e+01  1.3729e+03  10.64  
+----- Results for 2nd geometry ---------- 
+Material    Re_D       Nu_u      h_bar(W/m2/K) q_dot(W)  Time(H)   
+Air_T_fl : 1.7470e+04  6.8412e+01  5.2051e+01  2.1391e+03  15.05  
+Air_T_m : 7.5931e+03  4.1461e+01  4.6791e+01  1.9229e+03  15.05  

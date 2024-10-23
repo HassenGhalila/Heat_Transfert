@@ -1,0 +1,27 @@
+#------------------------------ Tutorial 2 : Exercice 11 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressure, Free velocity
+#
+# Table A.4, Air (T_fl =288 K, 1 atm) : ν = 14.82×10-6 (m2/s), cond = 0.02534 (W/m/K), Pr = 0.71, µ=1.788x10-5 (N.s/m2) 
+# Table A.4, Air (T_s  = 945 K)        : µs = 4.099x10-5 (N.s/m2), Pr=0.710
+# Table A.6, Water(T_fl=288 K)       : µ = 0.001053 N.s/m^2, ν=1.139×10-6 (m2/s), cond=0.5948 W/m⋅K , Pr=8.06
+#------------------------------------------------------------------------------
+100             : Npt
+2               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+0.085            : Length, radius, diameter, ... (m)
+#-----
+288.15          : Temperature fluide T_fl (K)
+945.15          : Temperature surface T_s (K)
+1               : Pressur (Atm)
+0.5             : Free velocity (m/s)
+300.            : Input power
+0.5             : Free velocity min (u_min)
+10              : Free velocity max (u_max)
+#-----
+14.82 0.02534 0.71 1.788 4.099  3. : Air_T_fl (ν, k, Pr, µf, µs, u_a)
+1.139 0.5948 8.06 105.3 105.3  1.  : Water_T_fl (ν, k, Pr, µf, µs, u_w)
+#340   0.145  4000      : Oil
+# 0.113 0.0248    : Mercury
+

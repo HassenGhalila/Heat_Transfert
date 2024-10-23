@@ -1,0 +1,18 @@
+#------------------------------ Tutorial 2 : Exercice 1 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressur, Free velocity
+#
+# Table A.5, Engine Oil (333 K) : ρ = 864 (kg/m3), ν = 86.1×10-6 (m2/s), k = 0.140 (W/m⋅K), Pr = 1081
+#------------------------------------------------------------------------------
+100             : Npt
+0               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+1.              : Length, radius, ... (m)
+#-----
+373             : T° fluide T_fl (K)
+293             : T° surface T_s (K)
+1               : Pressur (Atm)
+0.1             : Free velocity (m/s)
+#-----
+864 86 0.140 1081   : Oil_T_fl  (ρ, ν, k, Pr)

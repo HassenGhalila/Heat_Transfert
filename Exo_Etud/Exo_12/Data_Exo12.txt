@@ -1,0 +1,27 @@
+#------------------------------ Tutorial 2 : Exercice 12 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressure, Free velocity
+#
+# Table A.4, Helium (300 K, 1 atm) : ν = 122×10-6 (m2/s), k = 152 ×10-3(W/K/m), Pr = 0.68, µ = 199.0x10-7 (N.s/m2) ; 
+# Table A.4, Helium (700 K, 1 atm) : ν = 502×10-6 (m2/s), k = 278 ×10-3(W/K/m), Pr = 0.654, µ = 452.0x10-7 (N.s/m2)  
+# Table A.4, Helium (1100 K, 1 atm) : µ = 446.0x10-7 (N.s/m2);
+# Table A.1, Aluminum (300-400 K) : ρ = 2500 (kg/m3), Cp = 1200 (J/Kg/K) k = 200 (W/K/m) ; 
+#------------------------------------------------------------------------------
+100             : Npt
+1               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+0.0005          : Length, radius, diameter, ... (m)
+#-----------------
+300.          : Temperature fluide T_fl (K)
+1100.         : Temperature surface T_s (K)
+933.          : Temperature final T_fin (K)
+1               : Pressur (Atm)
+3               : Free velocity (m/s)
+0.5             : Free velocity min (u_min)
+10              : Free velocity max (u_max)
+#----- Fluide ----
+122.0 0.152 0.680 199. 446.0 : Helium_T_fl (ν, k, Pr, µ, µs)
+502.0 0.278 0.654 452. 446.0 : Helium_T_m (ν, k, Pr, µ, µs)
+#----- Solide ----
+2500 1200  200       : Aluminum (ρ, Cp, k)

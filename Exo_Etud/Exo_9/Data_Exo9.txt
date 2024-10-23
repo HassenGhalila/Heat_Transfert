@@ -1,0 +1,28 @@
+#------------------------------ Tutorial 2 : Exercice 9 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressure, Free velocity
+#
+# Table A.4, Air (T_fl=303 K, 1 atm) : ν = 16.19×10-6 (m2/s), k = 26.3 ×10-3(W/K/m), Pr = 0.7066 ; 
+# Table A.4, Air (T_m=488 K, 1 atm) : ν = 37.25×10-6 (m2/s), k = 39.9 ×10-3(W/K/m), Pr = 0.684 ; 
+# Table A.1, Aluminum (300-400 K) : ρ = 2702 (kg/m3), Cp = 903 (J/Kg/K) k = 237 (W/K/m) ; 
+#------------------------------------------------------------------------------
+100             : Npt
+1               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+0.025           : Length, radius, diameter, ... (m)
+0.102 0.675     : (C, m) Hilpert geometry 1
+0.246 0.588     : (C, m) Hilpert geometry 2
+#-----------------
+303.15          : Temperature fluide T_fl (K)
+673.15          : Temperature surface T_s (K)
+333.15          : Temperature final T_fin (K)
+1               : Pressur (Atm)
+8               : Free velocity (m/s)
+0.5             : Free velocity min (u_min)
+10              : Free velocity max (u_max)
+#----- Fluide ----
+16.19 0.0269 0.7066 : Air_T_fl (ν, k, Pr)
+37.25 0.0399 0.684  : Air_T_m (ν, k, Pr)
+#----- Solide ----
+2702 903  237       : Aluminum (ρ, Cp, k)
