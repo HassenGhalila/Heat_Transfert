@@ -2,6 +2,6 @@
 Convection
 
 Some examples to develop further on the heat-transfert exchang via convection
-This change is just a test
-This change is a second test
-This change is a second test
+We can share these modifications
+Perhaps you can add your own comments to check if I can see them ?
+News, rien de nouveau
