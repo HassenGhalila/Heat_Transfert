@@ -7,5 +7,5 @@ Air_Tb_mi : 3.3827e+04  8.7273e+01  1.0124e+01
 Material    Re_D       Nu_u      h_bar(W/m2/K) 
 Air_T_m : 9.4661e+04  2.0522e+02  1.3873e+01  
 
-  T_mo(Â°C)   T_so(Â°C)   
+  T_mo(°C)   T_so(°C)   
 5.4332e+02  2.3153e+02  
