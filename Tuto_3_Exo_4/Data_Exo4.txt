@@ -1,0 +1,32 @@
+#------------------------------ Tutorial 3 : Exercice 4 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder, ...), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressure, Free velocity
+#
+# Table A.4, Air (T_fl = 277 K, 1 atm) :  
+# Table A.4, Air (T_m = 400 K, 1 atm) : ν = 26.41×10-6 (m2/s), k = 33.8×10-3(W/K/m), Pr = 0.690; 
+# Table A.4, Air (Tb_mi = 823 K, 1 atm) : Cp = 1104 (m2/s), µ = 376.4×10-7(W/K/m), k = 58.4×10-3(W/K/m), Pr = 0.712 ; 
+#------------------------------------------------------------------------------
+100             : Npt
+1               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+0.5             : Characteristic dim : Length, radius, diameter, ... (m)
+6.              : Length
+0.683 0.466     : (C, m) Hilpert geometry 1
+0.683 0.466     : (C, m) Hilpert geometry 2
+0               : (0) Geometry1, (1) Geometry2
+#-----------------
+277.15          : Temperature fluide T_fl (K)
+523.15          : Temperature surface T_s (K)
+873.15          : Temperature input  T_mi (K)
+773.15          : Temperature output T_mo (K)
+1               : Pressur (Atm)
+5               : Free velocity (m/s)
+2               : Free velocity min (u_min)
+10              : Free velocity max (u_max)
+0.5             : gas flow rate (kg/s) inside the tube
+0               : Correlation (0) Dittus-Boelter, (1) ???
+#----- External ----
+26.41 0.0338 0.690 : Air_T_m  (ν, k, Pr)
+#----- Internal ----
+1104 376.4 0.058 0.712 : Air_Tb_mi  (Cp, µ, k, Pr)
