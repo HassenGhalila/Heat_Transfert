@@ -13,9 +13,9 @@
 0               : Edge
 0.04            : Length, radius, ... (m)
 #-----
-500             : Temperature T_fl (K)
+300             : Temperature T_fl (K)
 1               : Pressur (Atm)
-1               : Free velocity
+1               : Free velocity (ms-1)
 1               : Presence(1)/Absence(0) d'air
 1               : Presence(1)/Absence(0) d'eau
 #-----

@@ -50,16 +50,32 @@ def Affect():
         N_Body=1
         MyData_Air = pd.read_excel('TermoPhys.xlsx',sep=';',sheet_name=0).set_index('T')
         Body.append('Air_T_fl')
-        Visc.append(MyData_Air.iloc[4, 3]*1.E-6)
-        Pran.append(MyData_Air.iloc[4, 6])
+        for i in range(len(MyData_Air)-1):
+            if T_fl >= MyData_Air.index[i] and T_fl < MyData_Air.index[i+1]:
+                a = (MyData_Air.iloc[i+1, 3] - MyData_Air.iloc[i, 3])/(MyData_Air.index[i+1]-MyData_Air.index[i])
+                b = MyData_Air.iloc[i, 3] - a*MyData_Air.index[i] 
+                real_value = a*T_fl + b
+                Visc.append(real_value*1.E-6)
+                a = (MyData_Air.iloc[i+1, 6] - MyData_Air.iloc[i, 6])/(MyData_Air.index[i+1]-MyData_Air.index[i])
+                b = MyData_Air.iloc[i, 6] - a*MyData_Air.index[i] 
+                real_value = a*T_fl + b
+                Pran.append(real_value)
         
     Water_OnOff   = int(f.readline().split(':')[0])
     if Water_OnOff == 1 :
         N_Body  += 1
         MyData_Water = pd.read_excel('TermoPhys.xlsx',sep=';',sheet_name=1).set_index('T')
         Body.append('Water_T_fl')
-        Visc.append(MyData_Water.iloc[6, 2]*1.E-6/997)
-        Pran.append(MyData_Water.iloc[6, 6])
+        for i in range(len(MyData_Water)-1):
+            if T_fl >= MyData_Water.index[i] and T_fl < MyData_Water.index[i+1]:
+                a = (MyData_Water.iloc[i+1, 2] - MyData_Water.iloc[i, 2])/(MyData_Water.index[i+1]-MyData_Water.index[i])
+                b = MyData_Water.iloc[i, 2] - a*MyData_Water.index[i] 
+                real_value = a*T_fl + b
+                Visc.append(real_value*1.E-6/997)
+                a = (MyData_Water.iloc[i+1, 6] - MyData_Water.iloc[i, 6])/(MyData_Water.index[i+1]-MyData_Water.index[i])
+                b = MyData_Water.iloc[i, 6] - a*MyData_Water.index[i] 
+                real_value = a*T_fl + b
+                Pran.append(real_value)
     
     line=f.readline()   
     s = f.readline().split()
