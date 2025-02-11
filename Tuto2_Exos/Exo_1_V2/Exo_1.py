@@ -48,7 +48,7 @@ def Affect():
     Air_OnOff   = int(f.readline().split(':')[0])
     if Air_OnOff == 1 :
         N_Body=1
-        MyData_Air = pd.read_excel('TermoPhys.xlsx',sep=';',sheet_name=0).set_index('T')
+        MyData_Air = pd.read_excel('TermoPhys.xlsx',sheet_name=0).set_index('T')
         Body.append('Air_T_fl')
         for i in range(len(MyData_Air)-1):
             if T_fl >= MyData_Air.index[i] and T_fl < MyData_Air.index[i+1]:
@@ -64,7 +64,7 @@ def Affect():
     Water_OnOff   = int(f.readline().split(':')[0])
     if Water_OnOff == 1 :
         N_Body  += 1
-        MyData_Water = pd.read_excel('TermoPhys.xlsx',sep=';',sheet_name=1).set_index('T')
+        MyData_Water = pd.read_excel('TermoPhys.xlsx',sheet_name=1).set_index('T')
         Body.append('Water_T_fl')
         for i in range(len(MyData_Water)-1):
             if T_fl >= MyData_Water.index[i] and T_fl < MyData_Water.index[i+1]:
