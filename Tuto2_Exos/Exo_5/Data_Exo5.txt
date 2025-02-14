@@ -1,0 +1,23 @@
+#------------------------------ Tutorial 2 : Exercice 5 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressur, Free velocity
+#
+# Table A.4, Air (Tf = 300 K) : nu=15.89×10-6(m2/s), k=26.3×10-3(W/m⋅K), Pr = 0.707
+#------------------------------------------------------------------------------
+50             : npt distance
+3               : ntf temperature
+10              : nw Number of windows
+4               : nv vitesse
+0               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+10.             : Length, radius, ... (m)
+1.              : Size window (xW)
+#-----
+258             : T° fluide T_fl_min (K)
+300             : T° fluide T_fl_max (K)
+1               : Pressur (Atm)
+5               : Free velocity (m/s) min
+15             : Free velocity (m/s) max
+#-----
+15.89 26.3 0.707 : Air_T_fl  (nu, k, Pr)

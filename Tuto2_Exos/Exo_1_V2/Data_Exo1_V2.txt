@@ -13,7 +13,7 @@
 0               : Edge
 0.04            : Length, radius, ... (m)
 #-----
-325             : Temperature T_fl (K) Pourquoi pas faire varier la T_fl dans un intervalle donné?
+325             : Temperature T_fl_min (K)
 1               : Pressur (Atm)
 1               : Free velocity (ms-1)
 1               : Presence(1)/Absence(0) d'air
