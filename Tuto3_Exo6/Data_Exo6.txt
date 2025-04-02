@@ -1,0 +1,26 @@
+#------------------------------ Tutorial 3 : Exercice 6 -----------------------
+# Geometry : Number of point for discretization (Npt), Symmetry (Plate,Cylinder), Characteristic length 
+#
+# Ambiant conditions: Temperatures, Pressure, Free velocity
+#
+# Table A.4, Air (300 K, 1 atm) : nu = 15.89×10-6 (m2/s), Pr = 0.707; 
+# Table A.6, Water (300 K)   : nu = mu/rho = 855×10-6 (Ns/m2) /997 (kg/m3) = 0.858×10-6 (m2/s), Pr = 5.83; 
+# Table A.5, Engine Oil (300 K) : nu = 550×10-6 (m2/s), Pr = 6400; 
+# Table A.5, Mercury (300 K)    : nu = 0.113×10-6 (m2/s), Pr = 0.0248
+#------------------------------------------------------------------------------
+100             : Npt
+0               : Symmetry - Plate (0), Cylinder(1), Sphere(2)
+0               : Edge
+0.3             : Length
+0.01            : Length, radius, ... (m)
+#-----
+293             : Temperature T_fl (K)
+400.            : Temperature de surface Ts de depart
+1               : Pressur (Atm)
+1               : Free velocity (ms-1)
+550             : Power 
+0               : Presence(1)/Absence(0) d'air
+1               : Presence(1)/Absence(0) d'eau
+#-----
+# 550 6400        : Oil_T_fl (nu, Pr)
+# 0.113 0.0248    : Mercury_T_fl (nu, Pr)
