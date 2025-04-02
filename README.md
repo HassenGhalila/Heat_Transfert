@@ -1,9 +1,7 @@
 # Heat_Transfert
 Convection
 
-Some examples to develop further on the heat-transfert exchang via convection
-This change is just a test
-This change is a second test
-This change is a third test
-Last chance
-ouf
+Je ne suis pas satisfait dans les calculs de l'exo6 du tuto3.
+Je pense qu'il y a un problème ?
+Peut-être qu'on peut y réfléchir ensemble lorsque tu auras 5mn ?
+
